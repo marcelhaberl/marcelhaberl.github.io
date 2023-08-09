@@ -1,0 +1,21 @@
+.content {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    width: calc(100% - 14px);
+    height: 28px;
+    top: 14px;
+    right: 14px;
+    z-index: 600;
+}
+
+header img {
+    display: block;
+    height: 28px;
+    margin: 0 7px;
+    filter: invert(42%) sepia(1%) saturate(0%) hue-rotate(11deg) brightness(98%) contrast(97%);
+}
