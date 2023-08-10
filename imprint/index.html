@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../assets/css/decoration.css">
     <link rel="stylesheet" href="../assets/css/imprint.css">
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/lang.js"></script>
+    <script src="../assets/js/cookie.js"></script>
 </head>
 <body>
 
@@ -46,6 +48,20 @@
           er Schutz Ihrer Privatsphäre hat hohe Priorität, und es werden weder kommerzielle Absichten verfolgt noch
           umfassende Datenerfassung betrieben. Wenn Sie Fragen zur Datenschutzerklärung oder zur Verwendung I
           hrer Daten haben, kontaktieren Sie mich bitte unter den unten angegebenen Kontaktdaten, die oben stehen.</p>
+
+        <h3>Cookies</h3>
+
+        <p>Diese Website verwendet Cookies, um bestimmte Einstellungen und Präferenzen zu speichern,
+            um Ihr Nutzererlebnis zu verbessern. Cookies sind kleine Textdateien,
+            die auf Ihrem Gerät gespeichert werden, wenn Sie die Website besuchen.
+            Die von uns verwendeten Cookies dienen ausschließlich dazu,
+            Ihre Auswahl für Funktionen wie Sprache oder Theme zu merken.</p>
+
+        <p>Die Cookies, die auf dieser Website verwendet werden, erfassen keine persönlichen oder sensiblen Daten.
+            Sie dienen lediglich dazu, Ihre Einstellungen zu speichern,
+            damit Sie bei einem erneuten Besuch der Website eine nahtlose Erfahrung haben können.</p>
+
+        <p>Durch die Nutzung dieser Website stimmen Sie der Verwendung von Cookies gemäß dieser Datenschutzerklärung zu.</p>
 
         <h3>Server-Logs</h3>
         <p>Automatisch werden Informationen in Server-Logs erfasst, die Ihr Browser beim Besuch dieser Website übermittelt.
@@ -91,6 +107,17 @@
     </div>
 </div>
 <div class="decoration"></div>
+
+<div id="cookie-wrapper">
+    <div class="cookie-content-wrapper">
+        <div class="cookie-header">
+            <img src="../assets/img/cookie.svg" alt="cookie">
+            <h2>Cookies</h2>
+        </div>
+        <p id="cookie" class="info"></p>
+        <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
+    </div>
+</div>
 
 </body>
 </html>

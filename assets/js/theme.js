@@ -4,11 +4,15 @@ const Theme = {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const isDarkMode = () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (!isDarkMode()) {
-        setTheme(Theme.Dark);
+    if (hasAcceptedCookies()) {
+        setTheme(getCookie("theme"));
     } else {
-        setTheme(Theme.Light);
+        const isDarkMode = () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (!isDarkMode()) {
+            setTheme(Theme.Dark);
+        } else {
+            setTheme(Theme.Light);
+        }
     }
 });
 
@@ -28,5 +32,9 @@ function getToggleImageUrl(theme) {
 
 function toggleTheme() {
     const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current === Theme.Dark ? Theme.Light : Theme.Dark);
+    const theme = current === Theme.Dark ? Theme.Light : Theme.Dark;
+    setTheme(theme);
+    if (hasAcceptedCookies()) {
+        setCookie("theme", theme);
+    }
 }
