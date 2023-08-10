@@ -23,7 +23,7 @@ function setCookie(key, value) {
     const date = new Date();
     date.setDate(date.getDate() + 30);
     const cookieValue = encodeURIComponent(value) + `; expires=${date.toUTCString()}`;
-    document.cookie = `${key}=${cookieValue}`;
+    document.cookie = `${key}=${cookieValue}; path=/`;
 }
 
 function getCookie(key) {
