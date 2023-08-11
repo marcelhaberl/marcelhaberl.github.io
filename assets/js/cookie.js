@@ -8,6 +8,7 @@ function acceptCookies() {
 
 document.addEventListener("DOMContentLoaded", function() {
     if (!hasAcceptedCookies()) {
+        writeBanner();
         const el = findElement();
         el.style.display = "flex";
         el.addEventListener("animationend", function () {
@@ -15,6 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
+
+function writeBanner() {
+    const url = document.body.hasAttribute("add-src") ? document.body.getAttribute("add-src") : "";
+    document.body.insertAdjacentHTML("beforeend", `<div id="cookie-wrapper"> 
+    <div class="cookie-content-wrapper">
+        <div class="cookie-header">
+            <img src="${url}assets/img/cookie.svg" alt="cookie" id="cookie-image">
+            <h2>Cookies</h2>
+        </div>
+        <p id="cookie" class="info"></p>
+        <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
+    </div>
+    </div>
+    `);
+}
 
 function findElement() {
     return document.getElementById("cookie-wrapper");

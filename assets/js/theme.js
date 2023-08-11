@@ -27,8 +27,7 @@ function setTheme(theme) {
 
     document.documentElement.setAttribute("data-theme", theme);
     const el = document.getElementById("theme-toggle");
-    const url = (el.hasAttribute("add") ? "../" : "") + getToggleImageUrl(currentTheme);
-    el.setAttribute("src", url);
+    el.setAttribute("src", getSrcPrefix() + getToggleImageUrl(currentTheme));
 }
 
 function getToggleImageUrl(theme) {

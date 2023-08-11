@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="../assets/css/content.css">
     <link rel="stylesheet" href="../assets/css/decoration.css">
     <link rel="stylesheet" href="../assets/css/imprint.css">
-    <script src="../assets/js/theme.js"></script>
-    <script src="../assets/js/lang.js"></script>
+    <script src="../assets/js/app.js"></script>
     <script src="../assets/js/cookie.js"></script>
+    <script src="../assets/js/lang.js"></script>
+    <script src="../assets/js/theme.js"></script>
 </head>
-<body>
-
+<body add-src="../">
 <div class="content">
     <header>
-        <img src="#" alt="theme toggle" onclick="toggleTheme()" add id="theme-toggle">
+        <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle">
         <a href="/"><img src="../assets/img/back.svg" alt="back"></a>
     </header>
 
@@ -104,17 +104,5 @@
     </div>
 </div>
 <div class="decoration"></div>
-
-<div id="cookie-wrapper">
-    <div class="cookie-content-wrapper">
-        <div class="cookie-header">
-            <img src="../assets/img/cookie.svg" alt="cookie">
-            <h2>Cookies</h2>
-        </div>
-        <p id="cookie" class="info"></p>
-        <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
-    </div>
-</div>
-
 </body>
 </html>
