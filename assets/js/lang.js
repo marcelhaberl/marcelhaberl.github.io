@@ -1,4 +1,4 @@
-let language = 'de';
+let language = getSystemLang();
 
 const lang = {
     "de": {
@@ -69,4 +69,16 @@ function getGreeting(messages) {
     } else {
         return messages.greeting_evening;
     }
+}
+
+function getSystemLang() {
+    console.log(navigator.languages)
+    for (const lang of navigator.languages) {
+        if (lang.includes("en"))
+            return "en";
+        else if (lang.includes("de")) {
+            return "de";
+        }
+    }
+    return "en";
 }
