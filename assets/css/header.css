@@ -21,7 +21,9 @@ header img {
     filter: invert(42%) sepia(1%) saturate(0%) hue-rotate(11deg) brightness(98%) contrast(97%);
 }
 
-header .header-circle-hover:hover {
-    box-shadow: 0 0 15px var(--primary-color);
-    transition: 0.5s;
+@media (hover: hover) {
+    .header-circle-hover:hover {
+        box-shadow: 0 0 15px var(--primary-color);
+        transition: 0.5s;
+    }
 }

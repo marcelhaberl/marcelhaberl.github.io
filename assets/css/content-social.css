@@ -24,13 +24,15 @@
     padding: 50%;
 }
 
-.social a:hover {
-    background-color: var(--background-color);
-    transition: 0.7s;
-}
+@media (hover: hover) {
+    .social a:hover {
+        background-color: var(--background-color);
+        transition: 0.7s;
+    }
 
-.social a img:hover {
-    filter: invert(51%) sepia(25%) saturate(2879%) hue-rotate(167deg) brightness(101%) contrast(109%) !important;
+    .social a img:hover {
+        filter: invert(51%) sepia(25%) saturate(2879%) hue-rotate(167deg) brightness(101%) contrast(109%) !important;
+    }
 }
 
 @media screen and (min-width: 1050px) and (min-height: 750px){
