@@ -1,3 +1,16 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 5% 0;
+    align-self: center;
+}
+
+@media screen and (min-width: 701px) {
+    .wrapper {
+        width: 80%;
+        max-width: 800px;
+    }
+}
+
 @media screen and (max-height: 650px) {
     .wrapper {
         align-self: start;

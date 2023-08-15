@@ -1,6 +1,6 @@
 let language = getSystemLang();
 
-const lang = {
+const LANG = {
     "de": {
         "greeting_morning": "Guten Morgen",
         "greeting_afternoon": "Schönen Tag",
@@ -41,30 +41,30 @@ function toggleLanguage() {
 }
 
 function setMessages() {
-    const messages = lang[language];
+    const MESSAGES = LANG[language];
 
-    writeMessage("greeting", getGreeting(messages));
-    writeMessage("greeting_i_am", messages.greeting_i_am);
-    writeMessage("description", messages.description);
-    writeMessage("leisure", messages.leisure);
-    writeMessage("imprint", messages.imprint);
-    writeMessage("cookie", messages.cookie);
-    writeMessage("cookie_btn", messages.cookie_btn);
+    writeMessage("greeting", getGreeting(MESSAGES));
+    writeMessage("greeting_i_am", MESSAGES.greeting_i_am);
+    writeMessage("description", MESSAGES.description);
+    writeMessage("leisure", MESSAGES.leisure);
+    writeMessage("imprint", MESSAGES.imprint);
+    writeMessage("cookie", MESSAGES.cookie);
+    writeMessage("cookie_btn", MESSAGES.cookie_btn);
 }
 
 
 function writeMessage(id, message) {
-    const el = document.getElementById(id);
-    if (el !== null) {
-        el.innerText = message;
+    const ELEMENT = document.getElementById(id);
+    if (ELEMENT) {
+        ELEMENT.innerText = message;
     }
 }
 
 function getGreeting(messages) {
-    const time = new Date().getHours();
-    if (time >= 0 && time < 11) {
+    const TIME = new Date().getHours();
+    if (TIME >= 0 && TIME < 11) {
         return messages.greeting_morning;
-    } else if (time >= 11 && time < 18) {
+    } else if (TIME >= 11 && TIME < 18) {
         return messages.greeting_afternoon;
     } else {
         return messages.greeting_evening;
@@ -72,7 +72,6 @@ function getGreeting(messages) {
 }
 
 function getSystemLang() {
-    console.log(navigator.languages)
     for (const lang of navigator.languages) {
         if (lang.includes("en"))
             return "en";

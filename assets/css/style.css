@@ -5,7 +5,7 @@
     --background-color: #fff;
     --primary-color: #00b3ff;
     --font-color: #6b6a6a;
-    --fomt-footer-color: #ababab;
+    --font-footer-color: #ababab;
     --cookie-background: #eaf1fd;
     --background-img: url("../img/background/background.jpeg");
     --background-img-small: url("../img/background/background-small.jpeg");
@@ -15,7 +15,7 @@
 :root[data-theme='dark'] {
     --background-color: #12141CFF;
     --primary-color: #0197ce;
-    --fomt-footer-color: #6b6a6a;
+    --font-footer-color: #6b6a6a;
     --font-color: #D3D3D3FF;
     --cookie-background: #262936;
     --background-img: url("../img/background/dark-background.png");
@@ -41,16 +41,11 @@ body {
 .content {
     transition: 1s;
     background-color: var(--background-color);
+    position: relative;
     display: flex;
     justify-content: center;
     overflow: auto;
-    z-index: 100 ;
-}
-
-.wrapper {
-    margin: 0 auto;
-    padding: 5% 0;
-    align-self: center;
+    z-index: 10;
 }
 
 
@@ -79,13 +74,16 @@ body {
         padding: 5% 0;
         width: 60%;
     }
-
-    .wrapper {
-        width: 80%;
-        max-width: 800px;
-    }
 }
-h1 {
+
+h1, h2, h3 {
     color: var(--primary-color);
+}
+
+h1 {
     font-size: clamp(2rem, 2.5vw, 3em);
+}
+
+.color-switch {
+    filter: invert(100%) sepia(2%) saturate(7410%) hue-rotate(29deg) brightness(105%) contrast(114%);
 }

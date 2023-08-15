@@ -1,10 +1,10 @@
 const Theme = {
-    Dark: "dark",
-    Light: "light",
-    System: "system"
+    DARK: "dark",
+    LIGHT: "light",
+    SYSTEM: "system"
 }
 
-let currentTheme = Theme.System;
+let currentTheme = Theme.SYSTEM;
 let themeSwitches = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,14 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-        if (currentTheme === Theme.System)
-            setTheme(Theme.System);
+        if (currentTheme === Theme.SYSTEM)
+            setTheme(Theme.SYSTEM);
     });
 });
 
 function setTheme(theme) {
+    if (!theme) theme = Theme.DARK;
     currentTheme = theme;
-    if (theme === Theme.System) theme = getSystemTheme();
+    if (theme === Theme.SYSTEM) theme = getSystemTheme();
 
     document.documentElement.setAttribute("data-theme", theme);
     const el = document.getElementById("theme-toggle");
@@ -32,9 +33,9 @@ function setTheme(theme) {
 
 function getToggleImageUrl(theme) {
     switch (theme) {
-        case Theme.System:
+        case Theme.SYSTEM:
             return "assets/img/system_mode.svg";
-        case Theme.Light:
+        case Theme.LIGHT:
             return  "assets/img/light_mode.svg";
         default:
             return  "assets/img/dark_mode.svg";
@@ -44,15 +45,15 @@ function getToggleImageUrl(theme) {
 function toggleTheme() {
     let theme;
 
-    if (currentTheme === Theme.System) {
-        theme = getSystemTheme() === Theme.Dark ? Theme.Light : Theme.Dark;
+    if (currentTheme === Theme.SYSTEM) {
+        theme = getSystemTheme() === Theme.DARK ? Theme.LIGHT : Theme.DARK;
         themeSwitches = 1;
     } else {
         if (themeSwitches === 2) {
-            theme = Theme.System;
+            theme = Theme.SYSTEM;
             themeSwitches = 0;
         } else {
-            theme = currentTheme === Theme.Dark ? Theme.Light : Theme.Dark;
+            theme = currentTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
             themeSwitches = 2;
         }
     }
@@ -66,5 +67,5 @@ function toggleTheme() {
 
 function getSystemTheme() {
     const darkMode =  window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return darkMode ? Theme.Dark : Theme.Light;
+    return darkMode ? Theme.DARK : Theme.LIGHT;
 }

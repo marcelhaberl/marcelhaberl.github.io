@@ -7,7 +7,7 @@ footer {
 }
 
 footer, footer a, footer a:visited {
-    color: var(--fomt-footer-color);
+    color: var(--font-footer-color);
     text-decoration: none;
 }
 

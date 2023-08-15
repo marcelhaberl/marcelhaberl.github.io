@@ -9,25 +9,25 @@ function acceptCookies() {
 document.addEventListener("DOMContentLoaded", function() {
     if (!hasAcceptedCookies()) {
         writeBanner();
-        const el = findElement();
-        el.style.display = "flex";
-        el.addEventListener("animationend", function () {
-            el.style.display = "none";
+        const ELEMENT = findElement();
+        ELEMENT.style.display = "flex";
+        ELEMENT.addEventListener("animationend", function () {
+            ELEMENT.style.display = "none";
         })
     }
 });
 
 function writeBanner() {
-    const url = document.body.hasAttribute("add-src") ? document.body.getAttribute("add-src") : "";
+    const URL = document.body.hasAttribute("add-src") ? document.body.getAttribute("add-src") : "";
     document.body.insertAdjacentHTML("beforeend", `<div id="cookie-wrapper"> 
-    <div class="cookie-content-wrapper">
-        <div class="cookie-header">
-            <img src="${url}assets/img/cookie.svg" alt="cookie" id="cookie-image">
-            <h2>Cookies</h2>
+        <div class="cookie-content-wrapper">
+            <div class="cookie-header">
+                <img src="${URL}assets/img/cookie.svg" alt="cookie" id="cookie-image">
+                <h2>Cookies</h2>
+            </div>
+            <p id="cookie" class="info"></p>
+            <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
         </div>
-        <p id="cookie" class="info"></p>
-        <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
-    </div>
     </div>
     `);
 }
@@ -37,22 +37,22 @@ function findElement() {
 }
 
 function setCookie(key, value) {
-    const date = new Date();
-    date.setDate(date.getDate() + 30);
-    const cookieValue = encodeURIComponent(value) + `; expires=${date.toUTCString()}`;
-    document.cookie = `${key}=${cookieValue}; path=/`;
+    const DATE = new Date();
+    DATE.setDate(DATE.getDate() + 30);
+    const COOKIE_VALUE = encodeURIComponent(value) + `; expires=${DATE.toUTCString()}`;
+    document.cookie = `${key}=${COOKIE_VALUE}; path=/`;
 }
 
-function getCookie(key) {
-    const name = `${key}=`;
-    const array = document.cookie.split(';');
-    for (const cookie of array) {
-        let c = cookie;
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
+function getCookie(cookieKey) {
+    const KEY = `${cookieKey}=`;
+    const ARRAY = document.cookie.split(';');
+    for (const COOKIE of ARRAY) {
+        let content = COOKIE;
+        while (content.charAt(0) === ' ') {
+            content = content.substring(1);
         }
-        if (c.indexOf(name) === 0) {
-            return decodeURIComponent(c.substring(name.length, c.length));
+        if (content.indexOf(KEY) === 0) {
+            return decodeURIComponent(content.substring(KEY.length, content.length));
         }
     }
     return null;

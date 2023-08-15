@@ -1,7 +1,7 @@
 #cookie-wrapper {
     display: none;
     position: fixed;
-    z-index: 900;
+    z-index: 90;
     bottom: 0;
     left: 0;
 
@@ -76,6 +76,5 @@
     to {
         opacity: 0;
         display: none;
-        animation-play-state: paused;
     }
 }
