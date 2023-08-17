@@ -39,8 +39,8 @@
         transition: 0.7s;
     }
 
-    .social a img:hover {
-        filter: invert(51%) sepia(25%) saturate(2879%) hue-rotate(167deg) brightness(101%) contrast(109%) !important;
+    .social a:hover img {
+        filter: invert(61%) sepia(44%) saturate(6864%) hue-rotate(170deg) brightness(107%) contrast(104%) !important;
     }
 }
 

@@ -22,4 +22,8 @@ header img {
         box-shadow: 0 0 15px var(--primary-color);
         transition: 0.5s;
     }
+
+    header img:hover {
+        scale: 1.1;
+    }
 }
