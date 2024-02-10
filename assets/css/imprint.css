@@ -1,9 +1,0 @@
-.wrapper {
-    align-self: start;
-}
-
-.wrapper a,
-.wrapper a:visited {
-    text-decoration: none;
-    color: var(--primary-color);
-}

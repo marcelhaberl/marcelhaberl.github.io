@@ -5,40 +5,41 @@
     <title>Marcel Haberl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/content.css">
-    <link rel="stylesheet" href="assets/css/content-social.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/decoration.css">
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/cookie.js"></script>
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/theme.js"></script>
 </head>
 <body>
-<div class="content">
+<div id="content">
     <header>
-        <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
-        <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover">
+        <nav>
+            <a href="#landing">Startseite</a>
+            <a href="#experience">Erfahrungen</a>
+        </nav>
+        <div>
+            <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
+            <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="assets/img/theme/">
+        </div>
     </header>
 
-    <div class="wrapper">
-        <h1><span id="greeting"></span>,<br><span id="greeting_i_am"></span></h1>
-        <p id="description" class="info"></p>
-        <p id="leisure" class="info"></p>
+    <div id="landing">
+        <div class="wrapper">
+            <h1><span id="greeting"></span>,<br><span id="greeting_i_am"></span></h1>
+            <p id="description" class="info"></p>
+            <p id="leisure" class="info"></p>
 
-        <div class="social">
-            <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
-            <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
-            <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
+            <div class="social">
+                <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
+                <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
+                <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
+            </div>
         </div>
-
-        <footer>
-            <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
-            <a href="imprint" id="imprint"></a>
-        </footer>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
+        <a href="imprint" id="imprint"></a>
+    </footer>
 </div>
-<div class="decoration"></div>
+<div id="decoration"></div>
 </body>
 </html>
