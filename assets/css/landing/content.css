@@ -1,0 +1,22 @@
+#landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social {
+    margin: 66px auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 66px auto;
+}
+
+#decoration {
+    position: fixed;
+    right: 0;
+}

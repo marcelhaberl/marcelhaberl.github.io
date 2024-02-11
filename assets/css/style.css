@@ -1,0 +1,34 @@
+@import "../font/Roboto/stylesheet.css";
+
+:root {
+    --page-background-img: url("../img/background/background.jpeg")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+    display: flex;
+
+    background-color: gainsboro;
+}
+
+#content {
+    width: 60%;
+    height: 100vh;
+}
+
+#decoration {
+    width: 40%;
+    height: 100vh;
+    background-image: var(--page-background-img);
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 750px;
+}

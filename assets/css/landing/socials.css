@@ -1,0 +1,13 @@
+:root {
+    --social-icon-size: 35px;
+    --social-size: 60px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social a img {
+    height: var(--social-icon-size);
+}

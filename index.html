@@ -5,45 +5,50 @@
     <title>Marcel Haberl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/landing/content.css">
+    <link rel="stylesheet" href="assets/css/landing/header.css">
+    <link rel="stylesheet" href="assets/css/landing/socials.css">
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/experience.js"></script>
+    <script src="assets/js/landing/experience.js"></script>
 </head>
 <body>
 <div id="content">
-    <header>
-        <nav>
-            <a href="#landing" class="homepage">Startseite</a>
-            <a href="#experiences" class="experience">Erfahrungen</a>
-        </nav>
-        <div>
-            <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
-            <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="assets/img/theme/">
-        </div>
-    </header>
+    <div id="content-wrapper">
+        <header>
+            <nav>
+                <a href="#" class="homepage">Startseite</a>
+                <a href="#experiences" class="experience">Erfahrungen</a>
+            </nav>
+            <div class="header-settings">
+                <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
+                <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="assets/img/theme/">
+            </div>
+        </header>
 
-    <div id="landing">
-        <div class="wrapper">
-            <h1><span class="greeting"></span>,<br><span class="greeting_i_am"></span></h1>
-            <p  class="info description"></p>
-            <p  class="info leisure"></p>
+        <div id="landing">
+            <div class="wrapper">
+                <h1><span class="greeting"></span>,<br><span class="greeting_i_am"></span></h1>
+                <p  class="info description"></p>
+                <p  class="info leisure"></p>
 
-            <div class="social">
-                <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
-                <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
-                <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
+                <div class="social">
+                    <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
+                    <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
+                    <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="experiences">
-        <h2 class="experience"></h2>
-    </div>
+        <div id="experiences">
+            <h2 class="experience"></h2>
+        </div>
 
-    <footer>
-        <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
-        <a href="imprint" class="imprint"></a>
-    </footer>
+        <footer>
+            <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
+            <a href="imprint" class="imprint"></a>
+        </footer>
+    </div>
 </div>
 <div id="decoration"></div>
 </body>
