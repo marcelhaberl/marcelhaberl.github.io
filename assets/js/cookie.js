@@ -1,7 +1,7 @@
 function acceptCookies() {
     findElement().style.animationPlayState = "running";
     setCookie("accepted", true);
-    setCookie("lang", language);
+    setCookie("lang", currentLanguage);
     setCookie("theme", currentTheme);
     setCookie("theme-switches", themeSwitches);
 }
