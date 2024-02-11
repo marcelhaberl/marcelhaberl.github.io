@@ -21,25 +21,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function hasAcceptedCookies() {
+    // TODO: Delete function as soon as cookies are used again.
+    return false;
+}
+
 function setTheme(theme) {
     if (!theme) theme = Theme.DARK;
     currentTheme = theme;
     if (theme === Theme.SYSTEM) theme = getSystemTheme();
 
     document.documentElement.setAttribute("data-theme", theme);
-    const el = document.getElementById("theme-toggle");
-    el.setAttribute("src", getSrcPrefix() + getToggleImageUrl(currentTheme));
+    const ELEMENT = document.getElementById("theme-toggle");
+    ELEMENT.setAttribute("src", getToggleImageUrl(currentTheme, ELEMENT));
 }
 
-function getToggleImageUrl(theme) {
+function getToggleImageUrl(theme, element) {
+    const ATTRIBUTE = element.getAttribute("path");
+    let url = ATTRIBUTE ? ATTRIBUTE : "";
     switch (theme) {
         case Theme.SYSTEM:
-            return "assets/img/system_mode.svg";
+            url += "system_mode.svg";
+            break;
         case Theme.LIGHT:
-            return  "assets/img/light_mode.svg";
+            url +=  "light_mode.svg";
+            break;
         default:
-            return  "assets/img/dark_mode.svg";
+            url +=  "dark_mode.svg";
+            break;
     }
+    return url;
 }
 
 function toggleTheme() {
