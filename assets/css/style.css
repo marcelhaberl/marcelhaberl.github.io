@@ -1,7 +1,14 @@
 @import "../font/Roboto/stylesheet.css";
 
 :root {
-    --page-background-img: url("../img/background/background.jpeg")
+    --page-background-img: url("../img/background/background.jpeg");
+}
+
+:root {
+    --page-background-img: url("../img/background/dark-background.png");
+    --background-color: #12141CFF;
+    --primary-color: #0197ce;
+    --font-color: #D3D3D3FF;
 }
 
 * {
@@ -12,8 +19,7 @@
 body {
     font-family: 'robotomedium', Arial, Helvetica, sans-serif;
     display: flex;
-
-    background-color: gainsboro;
+    background-color: var(--background-color);
 }
 
 #content {
