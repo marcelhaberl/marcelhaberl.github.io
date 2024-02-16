@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!HEADER) return;
 
         const CURRENT_Y = window.scrollY;
-        if (lastY > CURRENT_Y) {
+        if (CURRENT_Y <= 0) return;
+
+        if (lastY >= CURRENT_Y) {
             HEADER.style.top = "0";
         } else {
             if (!HEADER.matches(":hover")) {
