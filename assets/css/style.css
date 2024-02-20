@@ -20,6 +20,7 @@ body {
     font-family: 'robotomedium', Arial, Helvetica, sans-serif;
     display: flex;
     background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 #content {
@@ -27,14 +28,18 @@ body {
     height: 100vh;
 }
 
-#decoration {
-    width: 40%;
-    height: 100vh;
-    background-image: var(--page-background-img);
+h1, h2, h3 {
+    color: var(--primary-color);
 }
 
 #content-wrapper {
     margin: 0 auto;
     padding: 25px;
     max-width: 750px;
+}
+
+#decoration {
+    width: 40%;
+    height: 100vh;
+    background-image: var(--page-background-img);
 }
