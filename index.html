@@ -5,20 +5,23 @@
     <title>Marcel Haberl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/landing/content.css">
-    <link rel="stylesheet" href="assets/css/landing/header.css">
-    <link rel="stylesheet" href="assets/css/landing/socials.css">
+    <link rel="stylesheet" href="assets/css/landing_view/content.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/landing_view/socials.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/landing/experience.js"></script>
+    <script src="assets/js/experience.js"></script>
+    <script src="assets/js/header.js"></script>
 </head>
 <body>
 <div id="content">
     <div id="content-wrapper">
         <header>
             <nav>
-                <a href="#" class="homepage">Startseite</a>
-                <a href="#experiences" class="experience">Erfahrungen</a>
+                <a href="#"><span class="homepage">Startseite</span></a>
+                <a href="#experiences"><span class="experience">Erfahrungen</span></a>
             </nav>
             <div class="header-settings">
                 <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
@@ -29,8 +32,8 @@
         <div id="landing">
             <div class="wrapper">
                 <h1><span class="greeting"></span>,<br><span class="greeting_i_am"></span></h1>
-                <p  class="info description"></p>
-                <p  class="info leisure"></p>
+                <p  class="description"></p>
+                <p  class="leisure"></p>
 
                 <div class="social">
                     <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
@@ -42,6 +45,11 @@
 
         <div id="experiences">
             <h2 class="experience"></h2>
+            <div id="experiences_list"></div>
+            <ul class="key">
+                <li class="job lang_job"></li>
+                <li class="qualification lang_qualification"></li>
+            </ul>
         </div>
 
         <footer>

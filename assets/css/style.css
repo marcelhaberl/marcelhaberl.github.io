@@ -1,7 +1,23 @@
 @import "../font/Roboto/stylesheet.css";
 
 :root {
-    --page-background-img: url("../img/background/background.jpeg")
+    --page-background-img: url("../img/background/background.jpeg");
+    --background-color: #fff;
+    --primary-color: #00b3ff;
+    --secondary-color: #00d6ff;
+    --font-color: #6b6a6a;
+    --font-color-footer: #ababab;
+    color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+    --page-background-img: url("../img/background/dark-background.png");
+    --background-color: #12141CFF;
+    --primary-color: #0197ce;
+    --secondary-color: #00d6ff;
+    --font-color: #D3D3D3FF;
+    --font-color-footer: #6b6a6a;
+    color-scheme: dark;
 }
 
 * {
@@ -12,8 +28,8 @@
 body {
     font-family: 'robotomedium', Arial, Helvetica, sans-serif;
     display: flex;
-
-    background-color: gainsboro;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 #content {
@@ -21,14 +37,28 @@ body {
     height: 100vh;
 }
 
-#decoration {
-    width: 40%;
-    height: 100vh;
-    background-image: var(--page-background-img);
+h1, h2, h3 {
+    color: var(--primary-color);
 }
 
 #content-wrapper {
     margin: 0 auto;
     padding: 25px;
     max-width: 750px;
+}
+
+#decoration {
+    position: fixed;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-image: var(--page-background-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    overflow: hidden;
+}
+
+#decoration[data-theme="light"] {
+    background-position: right center;
 }

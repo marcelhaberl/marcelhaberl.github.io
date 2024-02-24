@@ -5,18 +5,23 @@
     <title>Impressum | Marcel Haberl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/cookie.js"></script>
+    <link rel="stylesheet" href="../assets/css/imprint.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
     <script src="../assets/js/lang.js"></script>
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/header.js"></script>
 </head>
-<body add-src="../">
-<div class="content">
-    <header>
-        <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover">
-        <a href="/"><img src="../assets/img/back.svg" alt="back" class="imprint-back-btn"></a>
-    </header>
+<body>
+<div id="content">
+    <div id="content-wrapper">
+        <header>
+            <a href="/"><img src="../assets/img/back.svg" alt="back"></a>
+            <div class="header-settings">
+                <img src="../assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
+                <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="../assets/img/theme/">
+            </div>
+        </header>
 
-    <div class="wrapper">
         <h1>Impressum</h1>
         <p>Marcel Haberl</p>
         <p>
@@ -99,6 +104,6 @@
         </ul>
     </div>
 </div>
-<div class="decoration"></div>
+<div id="decoration"></div>
 </body>
 </html>

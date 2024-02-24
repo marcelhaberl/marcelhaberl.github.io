@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hasAcceptedCookies()) {
         currentLanguage = getCookie("lang");
     }
+    document.dispatchEvent(new Event("loadLang"));
     fetch("/assets/lang.json")
         .then(res => res.json())
         .then(json => messages = json)
-        .then(fetchExperiences)
-        .then(writeMessages)
+        .then(json => document.dispatchEvent(new CustomEvent("langLoaded", json)))
+        .then(writeMessages);
 });
 
 function toggleLanguage() {

@@ -1,0 +1,44 @@
+:root {
+    --social-size: 70px;
+    --social-icon-size: 45px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 66px auto;
+}
+
+.social a {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.social a img {
+    height: var(--social-icon-size);
+}
+
+.color-switch {
+    filter: invert(100%) sepia(2%) saturate(7410%) hue-rotate(29deg) brightness(105%) contrast(114%);
+    color: white;
+}
+
+.social .linkedin {
+    height: calc(var(--social-icon-size) - 5px);
+}
+
+@media (hover: hover) {
+    .social a:hover {
+        background-color: var(--background-color);
+        transition: 0.7s;
+    }
+
+    .social a:hover img {
+        filter: invert(61%) sepia(44%) saturate(6864%) hue-rotate(170deg) brightness(107%) contrast(104%) !important;
+    }
+}

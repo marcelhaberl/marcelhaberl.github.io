@@ -5,6 +5,7 @@
       "date": "02/2022;TODAY",
       "company": "Reform-Werke Bauer & Co GmbH",
       "link": "https://www.linkedin.com/company/reform-werke-bauer-&-co/",
+      "class": "job",
       "description": [
         "Hauptsächlich die Verarbeitung von Feinblechen, beginnend bei der Stanzerei über die Presserei bis hin zur Verschweißung mittels verschiedener Verfahren wie MSG, Widerstands- und Bolzenschweißung.",
         "Bei Bedarf vertrete ich meinen Teamleiter und bin zuständig für die Priorisierung, Vorbereitung und Verteilung von Aufträgen sowie für die Sicherstellung ihrer Qualität während der Produktion.",
@@ -15,12 +16,14 @@
       "name": "Stapler Bescheinigung",
       "date": "10/2022",
       "company": "WIFI Oberösterreich",
+      "class": "qualification",
       "link": "https://www.linkedin.com/school/wifi-oö/"
     },
     {
       "name": "Lehrling zum Maschinenbautechniker",
       "date": "09/2018;02/2022",
       "company": "Reform-Werke Bauer & Co GmbH",
+      "class": "job",
       "link": "https://www.linkedin.com/company/reform-werke-bauer-&-co/"
     }
   ],
