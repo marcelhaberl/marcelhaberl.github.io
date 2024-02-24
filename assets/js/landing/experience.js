@@ -13,17 +13,27 @@ function writeExperiences() {
         return
     }
 
-    const PARENT = document.getElementById("experiences");
+    const PARENT = document.getElementById("experiences_list");
     for (const EXPERIENCE of experiences[currentLanguage]) {
-        const NODE = document.createElement("div");
-        const NAME_ELEMENT = document.createElement("h3");
-        NAME_ELEMENT.textContent = EXPERIENCE["name"];
-        NODE.appendChild(NAME_ELEMENT);
-        NODE.appendChild(getDate(EXPERIENCE));
+        const NODE = createBaseNode(EXPERIENCE)
+        NODE.appendChild(getName(EXPERIENCE));
         NODE.appendChild(getCompany(EXPERIENCE));
+        NODE.appendChild(getDate(EXPERIENCE));
         writeDescription(NODE, EXPERIENCE);
         PARENT.appendChild(NODE);
     }
+}
+
+function createBaseNode(experience) {
+    const NODE = document.createElement("div");
+    NODE.classList.add(experience["class"]);
+    return NODE;
+}
+
+function getName(experience) {
+    const NAME_ELEMENT = document.createElement("h3");
+    NAME_ELEMENT.textContent = experience["name"];
+    return NAME_ELEMENT;
 }
 
 function getDate(experience) {
@@ -40,14 +50,17 @@ function getDate(experience) {
     const END_DATE= getEndDate(DATES[1], IS_TODAY);
 
     let years = getYear(END_DATE) - getYear(START_DATE);
-    let months = getMonth(END_DATE) - getMonth(START_DATE);
-    if (getMonth(END_DATE) <= getMonth(START_DATE)) months--;
+    let months = getMonth(END_DATE) + 1 - getMonth(START_DATE);
+    if (getMonth(END_DATE) <= getMonth(START_DATE)) {
+        years--;
+        months--;
+    }
 
     let DATES_COMBINED = START_DATE + " - " + (IS_TODAY ? getMessages()["today"] : END_DATE);
     years = (years === 0 ? "" : years + " " + (years === 1 ? getMessages()["year"] : getMessages()["years"]) + " ");
 
     if (months < 0) months *= -1;
-    if (getMonth(END_DATE) <= getMonth(START_DATE)) months--;
+    if (getMonth(END_DATE) < getMonth(START_DATE)) months--;
     months = (months === 0 && years !== "" ? "" : months + " " + (months === 1 ? getMessages()["month"] : getMessages()["months"]));
 
     ELEMENT.textContent = DATES_COMBINED + " • " + years + months;
