@@ -44,4 +44,6 @@ h1, h2, h3 {
     width: 40%;
     height: 100vh;
     background-image: var(--page-background-img);
+    position: fixed;
+    right: 0;
 }

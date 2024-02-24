@@ -1,0 +1,28 @@
+header nav img {
+    translate: 50%
+}
+
+#content-wrapper {
+    align-self: start;
+    padding-top: 68px;
+    position: relative;
+}
+
+#content-wrapper a,
+#content-wrapper a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#content-wrapper ul {
+    margin: 10px 0;
+    padding-left: 2em;
+}
+
+#content-wrapper h2 {
+    margin-top: 10px;
+}
+
+#content-wrapper p {
+    padding: 10px 0;
+}

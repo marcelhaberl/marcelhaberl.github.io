@@ -7,6 +7,8 @@ function fetchExperiences() {
         .then(writeExperiences)
 }
 
+document.addEventListener("langLoaded", fetchExperiences);
+
 function writeExperiences() {
     if (experiences === undefined) {
         console.log("No experiences found.")
