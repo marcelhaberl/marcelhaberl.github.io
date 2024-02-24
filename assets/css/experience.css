@@ -1,0 +1,90 @@
+:root {
+    --experience-padding-left-right: 46px;
+    --experience-padding-top-buttom: 25px;
+    --experience-point-size: 14px;
+    --experience-point-border: 5px;
+    --experience-font-color-date: #626262;
+}
+
+#experiences {
+    margin: 5% 0;
+}
+
+#experiences h2 {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 2.2rem;
+}
+
+/*    EXPERIENCE LIST     */
+
+#experiences_list div {
+    position: relative;
+    border-left: 2px solid var(--primary-color);
+    padding: var(--experience-padding-top-buttom) var(--experience-padding-left-right);
+    padding-bottom: 25px;
+}
+
+#experiences_list div:before,
+#experiences_list div:after {
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+}
+
+#experiences_list .qualification:before,
+#experiences_list .qualification:after {
+    background-color: var(--secondary-color);
+}
+
+#experiences_list div:before {
+    width: var(--experience-point-size);
+    height: var(--experience-point-size);
+    border: var(--experience-point-border) solid var(--background-color);
+    border-radius: 50%;
+    top: calc(50% - (var(--experience-point-size) + var(--experience-point-border)) / 2);
+    left: calc((var(--experience-point-border) + var(--experience-point-size) / 2 + 1px) * -1);
+}
+
+#experiences_list div:after {
+    width: calc(var(--experience-padding-left-right) / 3);
+    height: 2px;
+    top: calc(50% + 1px);
+    left: calc(var(--experience-point-border) + (var(--experience-point-size) / 2));
+}
+
+#experiences_list .qualification h3 {
+    color: var(--secondary-color);
+}
+
+#experiences_list h3 {
+    font-size: 1.5rem;
+}
+
+#experiences_list p {
+    color: var(--experience-font-color-date);
+}
+
+#experiences_list a {
+    color: var(--font-color);
+}
+
+#experiences_list ul {
+    margin: 15px;
+}
+
+/*    EXPERIENCE LIST END     */
+
+#experiences .key {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+#experiences .key .job {
+    color: var(--primary-color);
+}
+
+#experiences .key .qualification {
+    color: var(--secondary-color);
+}
