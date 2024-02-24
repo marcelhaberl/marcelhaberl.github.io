@@ -2,15 +2,22 @@
 
 :root {
     --page-background-img: url("../img/background/background.jpeg");
+    --background-color: #fff;
+    --primary-color: #00b3ff;
+    --secondary-color: #00d6ff;
+    --font-color: #6b6a6a;
+    --font-color-footer: #ababab;
+    color-scheme: light;
 }
 
-:root {
+:root[data-theme='dark'] {
     --page-background-img: url("../img/background/dark-background.png");
     --background-color: #12141CFF;
     --primary-color: #0197ce;
     --secondary-color: #00d6ff;
     --font-color: #D3D3D3FF;
     --font-color-footer: #6b6a6a;
+    color-scheme: dark;
 }
 
 * {
