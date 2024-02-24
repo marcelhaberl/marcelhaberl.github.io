@@ -1,0 +1,10 @@
+footer {
+    font-size: clamp(0.5rem, 1em, 1.2rem);
+}
+
+footer,
+footer a,
+footer a:visited {
+    color: var(--font-color-footer);
+    text-decoration: none;
+}
