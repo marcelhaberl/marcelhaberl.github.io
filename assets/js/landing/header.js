@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             HEADER.style.top = "0";
         } else {
             if (!HEADER.matches(":hover")) {
-                HEADER.style.top = "-1000px";
+                HEADER.style.top = "-500px";
             }
         }
         lastY = CURRENT_Y;
