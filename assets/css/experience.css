@@ -44,6 +44,7 @@
     border-radius: 50%;
     top: calc(50% - (var(--experience-point-size) + var(--experience-point-border)) / 2);
     left: calc((var(--experience-point-border) + var(--experience-point-size) / 2 + 1px) * -1);
+    transition: 1s;
 }
 
 #experiences_list div:after {
