@@ -6,7 +6,7 @@ function acceptCookies() {
     setCookie("theme-switches", themeSwitches);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("loadLang", function() {
     if (!hasAcceptedCookies()) {
         writeBanner();
         const ELEMENT = findElement();
@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function writeBanner() {
-    const URL = document.body.hasAttribute("add-src") ? document.body.getAttribute("add-src") : "";
+    const URL = document.body.hasAttribute("add-src") ? "../" : "";
     document.body.insertAdjacentHTML("beforeend", `<div id="cookie-wrapper"> 
         <div class="cookie-content-wrapper">
             <div class="cookie-header">
                 <img src="${URL}assets/img/cookie.svg" alt="cookie" id="cookie-image">
                 <h2>Cookies</h2>
             </div>
-            <p id="cookie" class="info"></p>
-            <button id="cookie_btn" class="info" onclick="acceptCookies()"></button>
+            <p class="info cookie"></p>
+            <button class="info cookie_btn" onclick="acceptCookies()"></button>
         </div>
     </div>
     `);

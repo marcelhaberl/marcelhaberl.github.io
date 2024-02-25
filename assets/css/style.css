@@ -7,6 +7,7 @@
     --secondary-color: #00d6ff;
     --font-color: #6b6a6a;
     --font-color-footer: #ababab;
+    --cookie-background: #eaf1fd;
     color-scheme: light;
 }
 
@@ -17,6 +18,7 @@
     --secondary-color: #00d6ff;
     --font-color: #D3D3D3FF;
     --font-color-footer: #6b6a6a;
+    --cookie-background: #262936;
     color-scheme: dark;
 }
 

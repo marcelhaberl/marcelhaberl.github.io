@@ -21,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function hasAcceptedCookies() {
-    // TODO: Delete function as soon as cookies are used again.
-    return false;
-}
-
 function setTheme(theme) {
     if (!theme) theme = Theme.DARK;
     currentTheme = theme;
