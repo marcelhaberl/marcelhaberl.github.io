@@ -1,28 +1,32 @@
-header nav img {
-    translate: 50%
+#content .content {
+    padding: 78px 10%;
 }
 
-#content-wrapper {
-    align-self: start;
-    padding-top: 68px;
-    position: relative;
-}
-
-#content-wrapper a,
-#content-wrapper a:visited {
+#content .content a,
+#content .content a:visited {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-#content-wrapper ul {
+#content .content ul {
     margin: 10px 0;
     padding-left: 2em;
 }
 
-#content-wrapper h2 {
+#content .content h2 {
     margin-top: 10px;
 }
 
-#content-wrapper p {
+#content .content p {
     padding: 10px 0;
+}
+
+#content header nav {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#content header nav a {
 }

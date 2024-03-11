@@ -1,34 +1,41 @@
 #content header {
     position: fixed;
     top: 0;
+    left: 30%;
+    transform: translateX(-50%);
 
-    width: 100%;
-    max-width: 750px;
+    width: 60%;
     min-height: 68px;
 
     display: flex;
     justify-content: space-between;
-    transition: 1s;
+
     background-color: var(--background-color);
     opacity: 0.75;
+    transition: 1s;
 
     z-index: 100;
 }
 
 #content header nav {
     align-items: flex-start;
-    margin: auto 0;
     padding: 10px;
+}
+
+#content header nav .menu {
+    position: absolute;
+    visibility: hidden;
 }
 
 #content header nav a {
     position: relative;
     display: inline-block;
-    transition: .85s;
-    z-index: 101;
 
+    transition: .85s;
     color: var(--font-color);
     text-decoration: none;
+
+    z-index: 101;
 }
 
 #content header nav a span {
@@ -40,53 +47,16 @@
     z-index: 115;
 }
 
-/*    HOVER ANIMATION    */
-
-#content header nav a span:after,
-#content header nav a:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 50%;
-    transition: .85s;
-}
-
-#content header nav a:after {
-    background-color: var(--background-color);
-}
-
-#content header nav a span:after {
-    background: linear-gradient(to right, #00b3ff, #0197ce, #00b3ff);
-    height: 3px;
-}
-
-#content header nav a:hover {
-    scale: 1.1;
-}
-
-#content header nav a:hover:after {
-    width: 0;
-}
-
-#content header nav a span:hover:after {
-    width: 100%;
-}
-
-/*    HOVER ANIMATION END    */
-
 header a {
-    margin: auto 0;
+    margin: 0 auto;
 }
 
 .header-settings {
     align-self: flex-end;
-    margin: auto 0;
+    padding: 15px;
 }
 
-header a img,
-.header-settings img {
+#content header img {
     height: 26px;
     padding: 5px;
     margin: auto 5px;
@@ -95,13 +65,22 @@ header a img,
     border-radius: 50%;
 }
 
-.header-settings img:hover {
-    box-shadow: 0 0 25px -7px var(--primary-color);
-    scale: 1.2;
-    transition: .85s;
+@media screen and (min-width: 901px) {
+    #content header .header-settings img:hover {
+        box-shadow: 0 0 25px -7px var(--primary-color);
+        scale: 1.2;
+        transition: .85s;
+    }
 }
 
 header a:hover {
     scale: 1.2;
     transition: .85s;
+}
+
+@media screen and (max-width: 900px) {
+    #content header {
+        width: 100%;
+        left: 50%;
+    }
 }

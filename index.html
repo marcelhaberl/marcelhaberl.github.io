@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/landing_view/content.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/landing_view/header.css">
     <link rel="stylesheet" href="assets/css/landing_view/socials.css">
     <link rel="stylesheet" href="assets/css/experience.css">
     <link rel="stylesheet" href="assets/css/footer.css">
@@ -19,46 +20,48 @@
 </head>
 <body>
 <div id="content">
-    <div id="content-wrapper">
-        <header>
-            <nav>
-                <a href="#"><span class="homepage"></span></a>
-                <a href="#experiences"><span class="experience"></span></a>
-            </nav>
-            <div class="header-settings">
-                <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
-                <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="assets/img/theme/">
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="assets/img/menu.svg" alt="menu" class="menu_item show">
+                <img src="assets/img/close.svg" alt="close" class="close_item">
             </div>
-        </header>
+            <a href="#"><span class="homepage"></span></a>
+            <a href="#experiences"><span class="experience"></span></a>
+        </nav>
+        <div class="header-settings">
+            <img src="assets/img/language.svg" alt="language" onclick="toggleLanguage()" class="header-circle-hover">
+            <img src="#" alt="theme toggle" onclick="toggleTheme()" id="theme-toggle" class="header-circle-hover" path="assets/img/theme/">
+        </div>
+    </header>
 
-        <div id="landing">
-            <div class="wrapper">
-                <h1><span class="greeting"></span>,<br><span class="greeting_i_am"></span></h1>
-                <p  class="description"></p>
-                <p  class="leisure"></p>
+    <div id="landing" class="content">
+        <div class="wrapper">
+            <h1><span class="greeting"></span>,<br><span class="greeting_i_am"></span></h1>
+            <p  class="description"></p>
+            <p  class="leisure"></p>
 
-                <div class="social">
-                    <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
-                    <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
-                    <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
-                </div>
+            <div class="social">
+                <a href="https://github.com/marcelhaberl"><img alt="GitHub" src="assets/img/social/github.svg"></a>
+                <a href="https://www.linkedin.com/in/marcel-haberl/"><img alt="LinkedIn" src="assets/img/social/linkedin.svg" class="linkedin color-switch"></a>
+                <a href="mailto:hey@marcel-haberl.at"><img alt="Mail" src="assets/img/social/mail.svg" class="color-switch"></a>
             </div>
         </div>
-
-        <div id="experiences">
-            <h2 class="experience"></h2>
-            <div id="experiences_list"></div>
-            <ul class="key">
-                <li class="job lang_job"></li>
-                <li class="qualification lang_qualification"></li>
-            </ul>
-        </div>
-
-        <footer>
-            <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
-            <a href="imprint" class="imprint"></a>
-        </footer>
     </div>
+
+    <div id="experiences" class="content">
+        <h2 class="experience"></h2>
+        <div id="experiences_list"></div>
+        <ul class="key">
+            <li class="job lang_job"></li>
+            <li class="qualification lang_qualification"></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Marcel Haberl. Some rights reserved.</p>
+        <a href="imprint" class="imprint"></a>
+    </footer>
 </div>
 <div id="decoration"></div>
 </body>
