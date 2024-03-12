@@ -7,7 +7,7 @@ const LANG = {
         "greeting_evening": "Schönen Abend",
         "greeting_i_am": "ich bin Marcel Haberl.",
         "description": "Ein gelernter Maschinenbautechniker und derzeit als Spengler bei einem der führenden Unternehmen Europas für Spezialfahrzeuge in der Bergland- und Kommunaltechnik tätig.",
-        "leisure": "In meiner Freizeit widme ich mich gerne der Hobby-Java-Softwarentwicklung. Darüber hinaus arbeite ich derzeit daran, meine Fähigkeiten im Bereich der Webentwicklung weiter auszubauen.",
+        "leisure": "In meiner Freizeit widme ich mich gerne der Hobby-Softwareentwicklung, wobei meine bevorzugten Sprachen Java und GO sind. Seit Kurzem beschäftige ich mich auch intensiver mit JavaScript.",
         "imprint": "Impressum & Datenschutz",
         "cookie": "Diese Website verwendet Cookies, um Ihr Nutzererlebnis zu verbessern. Durch die Nutzung der Website stimmen Sie der Verwendung von Cookies gemäß der Datenschutzerklärung zu. ",
         "cookie_btn": "Zustimmen und fortfahren"
@@ -18,7 +18,7 @@ const LANG = {
         "greeting_evening": "Good evening",
         "greeting_i_am": "I am Marcel Haberl.",
         "description": "A trained mechanical engineering technician, currently working as a tinsmith at one of Europe's leading companies for special vehicles in mountain and municipal technology.",
-        "leisure": "In my leisure time, I take pleasure in pursuing hobby Java software development. Additionally, I am currently engaged in enhancing my skills in web development",
+        "leisure": "In my leisure time, I take pleasure in pursuing hobby software development. My favorite languages being Java and GO. Recently, I have also started to work more intensively with JavaScript.",
         "imprint": "Imprint & Privacy",
         "cookie": "This website uses cookies to enhance your user experience. By using the website, you consent to the use of cookies in accordance with the Privacy Policy.",
         "cookie_btn": "Agree and Continue"
