@@ -32,6 +32,11 @@
     position: relative;
 }
 
+.cookie-content-wrapper a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 #cookie-wrapper img {
     height: 1.5em;
     margin-right: 5px;

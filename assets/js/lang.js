@@ -32,7 +32,7 @@ function writeMessages() {
     for (const key in getMessages()) {
         if (key.startsWith("greeting_") && key !== "greeting_i_am") continue;
         for (const ELEMENT of document.getElementsByClassName(key)) {
-            ELEMENT.innerText = getMessages()[key];
+            ELEMENT.innerHTML = getMessages()[key];
         }
     }
 }
