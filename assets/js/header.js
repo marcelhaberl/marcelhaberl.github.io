@@ -3,14 +3,19 @@ let lastY = 0;
 document.addEventListener("DOMContentLoaded", () => {
     const HEADER = document.querySelector("header");
     window.addEventListener("scroll", () => scroll(HEADER));
-    registerHeaderClickEvent(document.querySelector("#content header nav .menu"), HEADER);
-    for (const ELEMENT of HEADER.getElementsByTagName("a")) {
-        registerHeaderClickEvent(ELEMENT, HEADER);
-    }
+    registerClickEvents(HEADER);
 });
 
 function registerHeaderClickEvent(element, header) {
     element.addEventListener("click", () => toggleMenu(header));
+}
+
+function registerClickEvents(header) {
+    if (window.location.href.indexOf("imprint") !== -1) return;
+    registerHeaderClickEvent(document.querySelector("#content header nav .menu"), header);
+    for (const ELEMENT of header.getElementsByTagName("a")) {
+        registerHeaderClickEvent(ELEMENT, header);
+    }
 }
 
 function scroll(header) {
