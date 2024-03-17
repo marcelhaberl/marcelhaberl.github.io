@@ -63,6 +63,7 @@ function getDate(experience) {
 
     if (months < 0) months *= -1;
     if (getMonth(END_DATE) < getMonth(START_DATE)) months--;
+    if (IS_TODAY) months--;
     months = (months === 0 && years !== "" ? "" : months + " " + (months === 1 ? getMessages()["month"] : getMessages()["months"]));
 
     ELEMENT.textContent = DATES_COMBINED + " • " + years + months;
