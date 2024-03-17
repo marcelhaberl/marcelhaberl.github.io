@@ -16,6 +16,7 @@ function writeExperiences() {
     }
 
     const PARENT = document.getElementById("experiences_list");
+    PARENT.innerHTML = "";
     for (const EXPERIENCE of experiences[currentLanguage]) {
         const NODE = createBaseNode(EXPERIENCE)
         NODE.appendChild(getName(EXPERIENCE));

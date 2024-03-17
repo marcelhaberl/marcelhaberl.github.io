@@ -35,6 +35,7 @@ function writeMessages() {
             ELEMENT.innerHTML = getMessages()[key];
         }
     }
+    writeExperiences();
 }
 
 function getGreeting() {
