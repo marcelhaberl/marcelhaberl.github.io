@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+#landing .wrapper {
+    margin-top: 77px;
+}
+
 h1 {
     font-size: clamp(1.8rem, 2.3vw, 2.8rem);
 }
@@ -15,8 +19,8 @@ h1 {
     line-height: 175%;
 }
 
-@media screen and (min-width: 901px) {
-    #landing .wrapper {
-        margin-top: 77px;
+@media screen and (max-width: 900px) {
+    #landing {
+        display: block;
     }
 }

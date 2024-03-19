@@ -36,7 +36,7 @@ body {
     display: flex;
     background-color: var(--background-color);
     color: var(--font-color);
-    transition: 1s;
+    transition: .85s;
 }
 
 #content {
