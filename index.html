@@ -16,6 +16,7 @@
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/experience.js"></script>
+    <script src="assets/js/experience_writer.js"></script>
     <script src="assets/js/header.js"></script>
 </head>
 <body>
@@ -53,8 +54,8 @@
         <h2 class="experience"></h2>
         <div id="experiences_list"></div>
         <ul class="key">
-            <li class="job lang_job"></li>
-            <li class="qualification lang_qualification"></li>
+            <li class="job lang_job" onclick="focusExperience(Experience.JOB)"></li>
+            <li class="qualification lang_qualification" onclick="focusExperience(Experience.QUALIFICATION)"></li>
         </ul>
     </div>
 

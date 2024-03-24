@@ -80,7 +80,12 @@
 #experiences .key {
     display: flex;
     justify-content: space-evenly;
-    margin: 10px 0;
+    list-style: none;
+    margin-top: 25px;
+}
+
+#experiences .key li {
+    cursor: pointer;
 }
 
 #experiences .key .job {
