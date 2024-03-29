@@ -50,7 +50,6 @@ function removeHideClasses(element) {
 }
 
 document.addEventListener("experiencesWritten", function() {
-    console.log("HI")
     setHeight();
     document.addEventListener("resize", setHeight);
 });
@@ -58,6 +57,4 @@ document.addEventListener("experiencesWritten", function() {
 function setHeight() {
     const NODE = document.querySelector("#experiences_list");
     NODE.style.minHeight = NODE.clientHeight.toString() + "px";
-    console.log(NODE.clientHeight.toString() + "px")
-    console.log(NODE.style.minHeight)
 }
