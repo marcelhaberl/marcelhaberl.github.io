@@ -19,7 +19,6 @@ function toggleLanguage() {
     if (hasAcceptedCookies()) {
         setCookie("lang", currentLanguage);
     }
-    document.dispatchEvent(new Event("langToggled"));
 }
 
 function getMessages() {

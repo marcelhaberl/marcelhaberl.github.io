@@ -49,13 +49,15 @@ function removeHideClasses(element) {
     element.classList.remove("hide-bottom");
 }
 
-document.addEventListener("langLoaded", function() {
+document.addEventListener("experiencesWritten", function() {
+    console.log("HI")
     setHeight();
-    document.addEventListener("langToggled", setHeight);
     document.addEventListener("resize", setHeight);
 });
 
 function setHeight() {
     const NODE = document.querySelector("#experiences_list");
     NODE.style.minHeight = NODE.clientHeight.toString() + "px";
+    console.log(NODE.clientHeight.toString() + "px")
+    console.log(NODE.style.minHeight)
 }

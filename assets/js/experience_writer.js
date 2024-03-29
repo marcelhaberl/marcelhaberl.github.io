@@ -28,6 +28,8 @@ function writeExperiences() {
         writeDescription(NODE, EXPERIENCE);
         PARENT.appendChild(WRAPPER);
     }
+
+    document.dispatchEvent(new Event("experiencesWritten"));
 }
 
 function createBaseNode(experience) {
