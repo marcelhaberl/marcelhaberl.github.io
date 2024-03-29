@@ -18,15 +18,18 @@
 
 /*    EXPERIENCE LIST     */
 
-#experiences_list div {
+#experiences_list div div {
     position: relative;
     border-left: 2px solid var(--primary-color);
     padding: var(--experience-padding-top-buttom) var(--experience-padding-left-right);
     padding-bottom: 25px;
 }
 
-#experiences_list div:before,
-#experiences_list div:after {
+#experiences_list .wrapper:first-child:before,
+#experiences_list .hide-top:before,
+#experiences_list .hide-bottom:after,
+#experiences_list div div:before,
+#experiences_list div div:after {
     content: "";
     position: absolute;
     background-color: var(--primary-color);
@@ -37,7 +40,34 @@
     background-color: var(--secondary-color);
 }
 
-#experiences_list div:before {
+#experiences_list .wrapper {
+    position: relative;
+}
+
+
+#experiences_list .wrapper:first-child:before,
+#experiences_list .hide-top:before,
+#experiences_list .hide-bottom:after {
+    background-color: var(--background-color);
+    height: calc(50% - var(--experience-point-size) / 2);
+    width: 6px;
+    left: -3px;
+    transition: 1s;
+    z-index: 50;
+}
+
+#experiences_list .wrapper:first-child:before,
+#experiences_list .hide-top {
+    top: 0;
+}
+
+#experiences_list .hide-bottom:after {
+    height: calc(50% - var(--experience-point-size) / 2 - var(--experience-point-border));
+    bottom: 0;
+}
+
+/* Point */
+#experiences_list div div:before {
     width: var(--experience-point-size);
     height: var(--experience-point-size);
     border: var(--experience-point-border) solid var(--background-color);
@@ -47,7 +77,8 @@
     transition: 1s;
 }
 
-#experiences_list div:after {
+/* Punktlinie */
+#experiences_list div div:after {
     width: calc(var(--experience-padding-left-right) / 3);
     height: 2px;
     top: calc(50% + 1px);

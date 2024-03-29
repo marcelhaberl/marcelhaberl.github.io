@@ -18,12 +18,15 @@ function writeExperiences() {
     const PARENT = document.getElementById("experiences_list");
     PARENT.innerHTML = "";
     for (const EXPERIENCE of experiences[currentLanguage]) {
-        const NODE = createBaseNode(EXPERIENCE)
+        const WRAPPER = document.createElement("div");
+        WRAPPER.classList.add("wrapper");
+        const NODE = createBaseNode(EXPERIENCE);
+        WRAPPER.appendChild(NODE);
         NODE.appendChild(getName(EXPERIENCE));
         NODE.appendChild(getCompany(EXPERIENCE));
         NODE.appendChild(getDate(EXPERIENCE));
         writeDescription(NODE, EXPERIENCE);
-        PARENT.appendChild(NODE);
+        PARENT.appendChild(WRAPPER);
     }
 }
 
