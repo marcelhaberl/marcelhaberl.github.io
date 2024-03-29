@@ -58,6 +58,7 @@ h1, h2, h3 {
 
 #content .content {
     padding: 0 10%;
+    min-height: 480px;
 }
 
 #decoration {
