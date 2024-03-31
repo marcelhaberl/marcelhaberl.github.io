@@ -115,10 +115,6 @@
     margin-top: 25px;
 }
 
-#experiences .key li {
-    cursor: pointer;
-}
-
 #experiences .key .job {
     color: var(--primary-color);
 }
