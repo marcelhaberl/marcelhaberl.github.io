@@ -13,6 +13,21 @@
       ]
     },
     {
+      "name": "Unternehmerprüfung",
+      "date": "07/2024",
+      "company": "WIFI / WKO Oberösterreich",
+      "class": "qualification",
+      "link": "https://www.wko.at/weiterbildung/unternehmerpruefung",
+      "description": [
+        "Personalmanagment",
+        "Kommunikation",
+        "Marketing",
+        "Organisation",
+        "unternehmerische Rechtskunde",
+        "Rechnungswesen"
+      ]
+    },
+    {
       "name": "Stapler Bescheinigung",
       "date": "10/2022",
       "company": "WIFI Oberösterreich",
@@ -41,9 +56,23 @@
       ]
     },
     {
+      "name": "Entrepreneurial Exam",
+      "date": "07/2024",
+      "company": "WIFI / WKO Upper Austria",
+      "class": "qualification",
+      "link": "https://www.wko.at/weiterbildung/unternehmerpruefung",
+      "description": [
+        "Personnel Management",
+        "Communication",
+        "Marketing",
+        "Organization",
+        "Entrepreneurial Law",
+        "Accounting"]
+    },
+    {
       "name": "Forklift Certification",
       "date": "10/2022",
-      "company": "WIFI Oberösterreich",
+      "company": "WIFI Upper Austria",
       "class": "qualification",
       "link": "https://www.linkedin.com/school/wifi-oö/",
       "description": []
